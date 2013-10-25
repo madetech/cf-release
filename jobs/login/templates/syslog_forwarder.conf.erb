@@ -16,6 +16,7 @@ $ActionQueueLowWaterMark 2000           # Num messages. Assuming avg size of 512
 $ActionQueueHighWaterMark 8000          # Num messages. Assuming avg size of 512B, this is 4MiB. (If this is reached, messages will spill to disk until the low watermark is reached).
 $ActionQueueTimeoutEnqueue 0            # Discard messages if the queue + disk is full
 $ActionQueueSaveOnShutdown on           # Save in-memory data to disk if rsyslog shuts down
+$PreserveFQDN on
 
 :syslogseverity-text, isequal, "info" ~
 :syslogseverity-text, isequal, "debug" ~
